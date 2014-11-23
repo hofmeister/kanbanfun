@@ -13,4 +13,5 @@ Planned features:
 - Estimate support for cards and shown totals on lists
 - Fixed "Done bucket"
 
-![Demo](https://cloud.githubusercontent.com/assets/441655/5156138/0158404c-72ad-11e4-8131-23924bf929c0.png)
+![Demo](https://cloud.githubusercontent.com/assets/441655/5156165/88cd4b0c-72ae-11e4-8a08-811e163bb60e.gif)
+
