@@ -12,3 +12,5 @@ Planned features:
 - Persistence support using http://hood.ie/
 - Estimate support for cards and shown totals on lists
 - Fixed "Done bucket"
+
+![Demo](https://cloud.githubusercontent.com/assets/441655/5156138/0158404c-72ad-11e4-8131-23924bf929c0.png)
