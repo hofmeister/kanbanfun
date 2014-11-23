@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="kanban">
+	<head>
+		<title>Kanban</title>
+		<link href="/public/css/kanban.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+
+	<div board="lists" class="board" ng-controller="boardCtrl">
+		<div class="list-container"
+			 ng-repeat="list in lists track by $index"
+			 index="{{$index}}"
+			 ng-controller="listCtrl">
+
+			<div class="list">
+				<div class="inner">
+					<h3 ng-bind="list.title"></h3>
+
+					<ul>
+						<li class="card"
+							ng-repeat="card in list.cards track by $index"
+							index="{{$index}}"
+							ng-controller="cardCtrl">
+							<div class="inner">
+								<div class="title" ng-bind="card.title"></div>
+							</div>
+						</li>
+					</ul>
+					<div class="card-composer">
+						<textarea placeholder="Add card..." ng-model="newCard.title" ng-blur="addNewCard()"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="list-composer">
+			<div class="inner"  ng-click="addList()">
+				Add a list...
+			</div>
+		</div>
+	</div>
+
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js"></script>
+	<script src="/public/js/kanban.js"></script>
+	<script src="//localhost:35729/livereload.js"></script>
+	</body>
+</html>
